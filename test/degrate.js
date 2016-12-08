@@ -1,13 +1,17 @@
 const assert = require('assert')
 const degrate = require('../degrate')
-const migrate = require('../migrate')
 const util = require('util')
 describe('degrate v2 to v1', () => {
   const confV2 = [
     {
       test: /.js?$/,
-      use: ['babel-loader', 'eslint-loader'],
+      use: ['babel-loader'],
       exclude: /node_modules/
+    },
+    {
+      test: /.js?$/,
+      enforce: "post",
+      use: ['eslint-loader'],
     },
     {
       test: /\.css$/,
@@ -36,7 +40,6 @@ describe('degrate v2 to v1', () => {
     assert.deepEqual(output, {
       loaders: [
         { test: /.js?$/, loader: 'babel-loader' },
-        { test: /.js?$/, loader: 'eslint-loader' },
         { test: /\.css$/, loader: 'style-loader' },
         { test: /\.css$/,
           loader: 'css-loader',
@@ -45,6 +48,9 @@ describe('degrate v2 to v1', () => {
              localIdentName: '[name]_[local]_[hash:base64:5]' } },
         { test: /\.css$/, loader: 'postcss-loader' },
         { test: /\.(png|jpeg|svg)$/, loader: 'url-loader' }
+      ],
+      "postLoaders": [
+        { "test": /.js?$/, "loader": "eslint-loader" }
       ]
     })
   })
@@ -63,6 +69,10 @@ describe('degrate v2 to v1', () => {
       enforce: "pre",
       use: ['eslint-loader'],
     }])
-    console.log(output)
+    assert.deepEqual(output, {
+      preLoaders: [ { test: /.js?$/, loader: 'eslint-loader' } ],
+      loaders: [ { test: /.js?$/, loader: 'eslint-loader' } ],
+      postLoaders: [ { test: /.js?$/, loader: 'eslint-loader' } ]
+    })
   })
 })

@@ -45,8 +45,8 @@ const convertEnfoceLoaders = (config, key, enfoceFlag) => {
 
 module.exports = (config) => {
   return Object.assign(
-    convertEnfoceLoaders(config, "preLoader", "pre"),
-    convertEnfoceLoaders(config, "loader", null),
-    convertEnfoceLoaders(config, "postLoader", "post")
+    convertEnfoceLoaders(config, "preLoaders", "pre"),
+    convertEnfoceLoaders(config, "loaders", null),
+    convertEnfoceLoaders(config, "postLoaders", "post")
   )
 }
