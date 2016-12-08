@@ -2,32 +2,7 @@ const assert = require('assert')
 const degrate = require('../degrate')
 const migrate = require('../migrate')
 const util = require('util')
-describe('', () => {
-  const confV1 = [
-    {
-      test: /.js?$/,
-      loaders: ['babel-loader', 'eslint-loader'],
-      exclude: /node_modules/
-    },
-    {
-      test: /\.css$/,
-      loader: 'style-loader'
-    },
-    {
-      test: /\.css$/,
-      loader: 'css-loader',
-      query: {
-        modules: true,
-        localIdentName: '[name]_[local]_[hash:base64:5]'
-      }
-    },
-    {
-      test: /\.css$/,
-      loader: 'postcss-loader'
-    },
-    { test: /\.(png|jpeg|svg)$/, loader: "url-loader" },
-  ]
-
+describe('degrate v2 to v1', () => {
   const confV2 = [
     {
       test: /.js?$/,
@@ -56,10 +31,7 @@ describe('', () => {
       ]
     }
   ]
-  // it('1 -> 2', () => {
-  //   const output = migrate(confV1)
-  //   assert.deepEqual(output, confV2)
-  // })
+
   it('2 -> 1', () => {
     const output = degrate(confV2)
     assert.deepEqual(output, {
