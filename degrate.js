@@ -9,7 +9,6 @@ const getQuery = (loader) => (
   (!!loader.options) ? { query: loader.options } : {}
 )
 
-
 const convert = (conf) => {
   return flatten(conf.use.map( (loaderConf) => {
     return Object.assign(

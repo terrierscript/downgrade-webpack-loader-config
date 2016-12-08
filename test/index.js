@@ -75,12 +75,12 @@ describe('', () => {
       { test: /\.(png|jpeg|svg)$/, loader: 'url-loader' }
     ])
   })
-  it('pre, post', () => {
-    {
-      test: /.js?$/,
-      enforce: "pre"
-      use: ['eslint-loader'],
-    },
 
+  it('pre, post', () => {
+    degrate([{
+      test: /.js?$/,
+      enforce: "pre",
+      use: ['eslint-loader'],
+    }])
   })
 })
