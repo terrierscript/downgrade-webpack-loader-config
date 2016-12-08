@@ -10,7 +10,6 @@ describe('degrate v2 to v1', () => {
       exclude: /node_modules/
     },
     {
-      // css読み込み。create-react-appを参考にした
       test: /\.css$/,
       use: [
         { loader: 'style-loader' },
