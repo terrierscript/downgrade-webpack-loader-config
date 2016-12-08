@@ -13,12 +13,13 @@ const convertLoader = (loader, conf) => {
   }, getOption(conf) )
 }
 
-const convert = (conf) => {
+const wrap = (key, item) => ( !!item ? {[key]: item} : {} )
+const convert = (conf, enforce) => {
   const c = Object.assign({}, {
     test: conf.test,
     use: getLoader(conf).map( (loader) => {
       return convertLoader(loader, conf)
-    })
+    }, wrap("enforce", enforce))
   })
   return c
 }
