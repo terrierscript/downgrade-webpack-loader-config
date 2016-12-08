@@ -1,0 +1,14 @@
+{
+  "name": "degrate-webpack-loader-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "inuscript <inuscript@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "lodash.flatten": "^4.4.0",
+    "mocha": "^3.2.0"
+  }
+}
