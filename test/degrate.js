@@ -32,7 +32,7 @@ describe('degrate v2 to v1', () => {
     const output = degrate(confV2)
     assert.deepEqual(output, {
       loaders: [
-        { test: /.js?$/, loader: 'babel-loader' },
+        { test: /.js?$/, loader: 'babel-loader', exclude: /node_modules/},
         { test: /\.css$/, loader: 'style-loader' },
         { test: /\.css$/,
           loader: 'css-loader',
@@ -66,5 +66,20 @@ describe('degrate v2 to v1', () => {
       loaders: [ { test: /.js?$/, loader: 'eslint-loader' } ],
       postLoaders: [ { test: /.js?$/, loader: 'eslint-loader' } ]
     })
+  })
+
+  it.only('merge', () => {
+    const confV2 = [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'postcss-loader' }
+        ]
+      },
+    ]
+    const output = degrate(confV2)
+    console.log(output)
   })
 })

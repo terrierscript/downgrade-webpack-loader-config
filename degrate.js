@@ -1,28 +1,39 @@
 // https://webpack.js.org/guides/migrating/
-const flatten = require("lodash.flatten")
+const flatten = require("lodash/flatten")
+const omit = require("lodash/omit")
+const tail = require("lodash/tail")
 
 const getLoader = (loaderConf) => {
   const loader = (typeof loaderConf === "string") ? loaderConf :loaderConf.loader
   return { loader }
 }
+
 const getQuery = (loader) => (
   (!!loader.options) ? { query: loader.options } : {}
 )
 
+const getRest = (conf) => {
+  return omit(conf, [
+    "use",
+    "enforce"
+  ])
+}
+
 const convert = (conf) => {
   return flatten(conf.use.map( (loaderConf) => {
     return Object.assign(
-      { test: conf.test },
       getLoader(loaderConf),
-      getQuery(loaderConf)
+      getQuery(loaderConf),
+      getRest(conf)
     )
   }))
 }
 
 const convertLoaders = (config) => {
-  return flatten(config.map( (conf) => {
+  const loaders = flatten(config.map( (conf) => {
     return convert(conf)
   }) )
+  return loaders
 }
 
 const filterConfig = (config, enfoceFlag) => {
@@ -33,6 +44,7 @@ const filterConfig = (config, enfoceFlag) => {
     return conf.enforce === enfoceFlag
   })
 }
+
 const convertEnfoceLoaders = (config, key, enfoceFlag) => {
   const filterd = filterConfig(config, enfoceFlag)
   if(filterd.length === 0){

@@ -11,6 +11,7 @@
   },
   "repository": "https://github.com/inuscript/degrate-webpack-loader-config/",
   "devDependencies": {
+    "lodash": "^4.17.2",
     "lodash.flatten": "^4.4.0",
     "mocha": "^3.2.0"
   }
