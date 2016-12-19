@@ -2,10 +2,24 @@
 
 > degrate webpack v2 config to v1 loadable
 
-## Usage Exmaple
+## Exmaple
+
+### Usage
 
 ```js
+const degrate = require('degrate-webpack-loader-config')
+const webpack2Conf = require('../webpack.config')
+const loaderConf = degrate(webpack2Conf.module.rules)
 
+// compability webpack v1 config
+module.exports = {
+  module: loaderConf,
+}
+```
+
+### Input / Output
+
+```js
 const degrate = require('degrate-webpack-loader-config')
 
 const v2Config = [
@@ -34,7 +48,9 @@ const v2Config = [
     ]
   }
 ]
+
 const output = degrate(v2Config)
+
 assert.deepEqual(output, {
   loaders: [
     { test: /.js?$/, loader: 'babel-loader' },
@@ -50,4 +66,6 @@ assert.deepEqual(output, {
     { "test": /.js?$/, "loader": "eslint-loader" }
   ]
 })
+// => assert OK
 ```
+
