@@ -8,7 +8,7 @@
 
 ```js
 const degrade = require('degrade-webpack-loader-config')
-const webpack2Conf = require('../webpack.config')
+const webpack2Conf = require('../webpack.config') // webpack v2 config
 const loaderConf = degrade(webpack2Conf.module.rules)
 
 // webpack v1 compatible config
