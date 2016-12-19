@@ -1,6 +1,6 @@
 # degrade-webpack-loader-config
 
-> degrade webpack v2 config to v1 loadable
+> Degrade webpack v2 config to v1 loadable
 
 ## Exmaple
 

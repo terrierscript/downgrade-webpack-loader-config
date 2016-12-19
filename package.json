@@ -1,6 +1,6 @@
 {
   "name": "degrade-webpack-loader-config",
-  "description": "Degrate webpack v2 config to v1 loadable",
+  "description": "Degrade webpack v2 config to v1 loadable",
   "version": "0.0.2",
   "main": "degrade.js",
   "file": "degrade.js",
