@@ -2,6 +2,12 @@
 
 > Degrade webpack v2 config to v1 loadable
 
+## Install
+
+```
+$ npm install -D degrade-webpack-loader-config
+```
+
 ## Exmaple
 
 ### Usage
