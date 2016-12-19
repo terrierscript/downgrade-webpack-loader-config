@@ -75,3 +75,6 @@ assert.deepEqual(output, {
 // => assert OK
 ```
 
+## References
+
+* https://webpack.js.org/guides/migrating/#module-loaders-is-now-module-rules
