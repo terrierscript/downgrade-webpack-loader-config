@@ -1,6 +1,6 @@
 {
   "name": "downgrade-webpack-loader-config",
-  "description": "Degrade webpack v2 config to v1 loadable",
+  "description": "Downgrade webpack v2 config to v1 loadable",
   "version": "0.1.0",
   "main": "downgrade.js",
   "file": "downgrade.js",
