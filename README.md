@@ -11,7 +11,7 @@ const degrate = require('degrate-webpack-loader-config')
 const webpack2Conf = require('../webpack.config')
 const loaderConf = degrate(webpack2Conf.module.rules)
 
-// compability webpack v1 config
+// webpack v1 compatible config
 module.exports = {
   module: loaderConf,
 }
