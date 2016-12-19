@@ -1,7 +1,7 @@
 {
   "name": "@inuscript/degrate-webpack-loader-config",
   "description": "degrate webpack v2 config to v1 loadable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "degrate.js",
   "file": "degrate.js",
   "author": "inuscript <inuscript@gmail.com>",
