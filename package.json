@@ -1,15 +1,15 @@
 {
-  "name": "degrate-webpack-loader-config",
+  "name": "degrade-webpack-loader-config",
   "description": "Degrate webpack v2 config to v1 loadable",
   "version": "0.0.2",
-  "main": "degrate.js",
-  "file": "degrate.js",
+  "main": "degrade.js",
+  "file": "degrade.js",
   "author": "inuscript <inuscript@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "mocha"
   },
-  "repository": "https://github.com/inuscript/degrate-webpack-loader-config/",
+  "repository": "https://github.com/inuscript/degrade-webpack-loader-config/",
   "devDependencies": {
     "lodash": "^4.17.2",
     "lodash.flatten": "^4.4.0",

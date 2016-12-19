@@ -1,15 +1,15 @@
-# degrate-webpack-loader-config
+# degrade-webpack-loader-config
 
-> degrate webpack v2 config to v1 loadable
+> degrade webpack v2 config to v1 loadable
 
 ## Exmaple
 
 ### Usage
 
 ```js
-const degrate = require('degrate-webpack-loader-config')
+const degrade = require('degrade-webpack-loader-config')
 const webpack2Conf = require('../webpack.config')
-const loaderConf = degrate(webpack2Conf.module.rules)
+const loaderConf = degrade(webpack2Conf.module.rules)
 
 // webpack v1 compatible config
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
 ### Input / Output
 
 ```js
-const degrate = require('degrate-webpack-loader-config')
+const degrade = require('degrade-webpack-loader-config')
 
 const v2Config = [
   {
@@ -49,7 +49,7 @@ const v2Config = [
   }
 ]
 
-const output = degrate(v2Config)
+const output = degrade(v2Config)
 
 assert.deepEqual(output, {
   loaders: [
