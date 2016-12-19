@@ -51,7 +51,6 @@ describe('degrade v2 to v1', () => {
     const output = degrade([{
       test: /.js?$/,
       use: ['eslint-loader'],
-      exclude: /node_modules/
     }, {
       test: /.js?$/,
       enforce: "post",
@@ -66,20 +65,5 @@ describe('degrade v2 to v1', () => {
       loaders: [ { test: /.js?$/, loader: 'eslint-loader' } ],
       postLoaders: [ { test: /.js?$/, loader: 'eslint-loader' } ]
     })
-  })
-
-  it.skip('merge configs', () => {
-    const confV2 = [
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'postcss-loader' }
-        ]
-      },
-    ]
-    const output = degrade(confV2)
-    console.log(output)
   })
 })
