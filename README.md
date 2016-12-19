@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install -D degrade-webpack-loader-config
+$ npm install -D downgrade-webpack-loader-config
 ```
 
 ## Exmaple
