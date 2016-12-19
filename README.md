@@ -8,6 +8,11 @@
 $ npm install -D downgrade-webpack-loader-config
 ```
 
+## Use case (When I use this package?)
+
+* Prepare for upgrade webpack v2.
+* Some sub tools compatibility (i.e. storybook)
+
 ## Exmaple
 
 ### Usage
