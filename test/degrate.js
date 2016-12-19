@@ -68,7 +68,7 @@ describe('degrate v2 to v1', () => {
     })
   })
 
-  it.only('merge', () => {
+  it.skip('merge configs', () => {
     const confV2 = [
       {
         test: /\.css$/,
