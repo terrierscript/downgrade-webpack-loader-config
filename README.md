@@ -1,6 +1,6 @@
 # downgrade-webpack-loader-config
 
-> Degrade webpack v2 config to v1 loadable
+> Downgrade webpack v2 config to v1 loadable
 
 ## Install
 
