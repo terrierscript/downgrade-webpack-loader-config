@@ -1,7 +1,7 @@
 const assert = require('assert')
-const degrade = require('../degrade')
+const downgrade = require('../downgrade')
 const util = require('util')
-describe('degrade v2 to v1', () => {
+describe('downgrade v2 to v1', () => {
   it('2 -> 1', () => {
     const confV2 = [
       {
@@ -29,7 +29,7 @@ describe('degrade v2 to v1', () => {
         ]
       }
     ]
-    const output = degrade(confV2)
+    const output = downgrade(confV2)
     assert.deepEqual(output, {
       loaders: [
         { test: /.js?$/, loader: 'babel-loader', exclude: /node_modules/},
@@ -48,7 +48,7 @@ describe('degrade v2 to v1', () => {
   })
 
   it('pre, post', () => {
-    const output = degrade([{
+    const output = downgrade([{
       test: /.js?$/,
       use: ['eslint-loader'],
     }, {

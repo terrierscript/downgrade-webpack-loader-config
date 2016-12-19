@@ -1,15 +1,15 @@
 {
-  "name": "degrade-webpack-loader-config",
+  "name": "downgrade-webpack-loader-config",
   "description": "Degrade webpack v2 config to v1 loadable",
   "version": "0.1.0",
-  "main": "degrade.js",
-  "file": "degrade.js",
+  "main": "downgrade.js",
+  "file": "downgrade.js",
   "author": "inuscript <inuscript@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "mocha"
   },
-  "repository": "https://github.com/inuscript/degrade-webpack-loader-config/",
+  "repository": "https://github.com/inuscript/downgrade-webpack-loader-config/",
   "devDependencies": {
     "lodash": "^4.17.2",
     "lodash.flatten": "^4.4.0",
