@@ -9,10 +9,12 @@
   "scripts": {
     "test": "mocha"
   },
+  "dependencies": {
+    "lodash": "^4.17.2",
+    "lodash.flatten": "^4.4.0"
+  },
   "repository": "https://github.com/inuscript/downgrade-webpack-loader-config/",
   "devDependencies": {
-    "lodash": "^4.17.2",
-    "lodash.flatten": "^4.4.0",
     "mocha": "^3.2.0"
   }
 }
